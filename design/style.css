@@ -249,6 +249,9 @@
       flex-direction: column;
       justify-content: normal;
     }
+    .type_of_time_ul {
+      flex-direction: row;
+    }
     .user_details {
       flex-direction: row;
       height: 95px;
@@ -274,3 +277,55 @@
     }
   }
   
+  @media only screen and (max-width: 755px) {
+    .user_details{
+      padding-right: 4px;
+      gap: 28px;
+    }
+    .user_name {
+      font-size: 14px;
+    }
+    .p_user_name {
+      font-size: 13px;
+    }
+    .numbers {
+      flex-direction: row;
+      align-items: center;
+    }
+    .stats,  .stats_card{
+      height: 115px;
+    }
+    .last_time {
+      text-align: center;
+    }
+    .stats_TopLayer, .stats_BottomLayer, .stats_flex {
+      gap: 50px;
+    }
+    .type_of_time_ul {
+      height: 54px;
+      padding: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+    .type_of_stat {
+      margin: 0px;
+    }
+
+  
+  }
+
+  @media only screen and (max-width: 540px) {
+    .stats_card {
+      width: 255px;
+    }
+    .user_card {
+      width: 255px;
+    }
+    .type_of_time_ul {
+      gap: 0px;
+      justify-content: space-evenly;
+    }
+    .user_name {
+      font-size: 19px;
+    }
+  }
