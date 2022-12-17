@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script type='text/javascript' src='./javasipt/JavaScript.js'></script>
+  <link rel="stylesheet" href="./design/style.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  
+</head>
+<body>
+
+  <main>
+    
+    <h1 id="h1" style="color: white; text-align: center; font-size: 50px;">Daily</h1>
+
+    <div class="attribution" style="color: #ffff; text-align: center; margin-bottom: 15px;">
+      Challenge by <a href="https://www.frontendmentor.io/home" target="_blank" style="color: #4bcf83;">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/sm7654" style="color: #4bcf83;">sm7654</a>.
+    </div>
+
+    <section>
+      <div class="user_card">
+        <div class="user_details">
+          <img src="./images/image-jeremy.png" class="user_image">
+          <p id="p_user_name">Report for <span class="user_name">Jeremy Robson</span></p>
+        </div>
+        
+        <ul class="type_of_time_ul">
+          <li id="daily" class="time" onclick="function1()">Daily</li>
+          <li id="weekly" class="time" onclick="function2()">Weekly</li>
+          <li id="monthly" class="time" onclick="function3()">Monthly</li>
+        </ul>
+      </div>
+
+      <div>
+
+        <div class="stats_flex">
+          <aside class="stats_TopLayer">
+
+            <div class="stats_card" id="work">
+              <div class="colored_layer" style="background-color: #ff8b64;">
+                <img src="./images/icon-work.svg">
+              </div>
+
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p>Work</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="work_current_time" class="current_time">5hrs</p>
+                  <p id="work_last_time" class="last_time">Yesterday - 2hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="stats_card">
+              <div class="colored_layer" id="play" style="background-color: #56c2e6;">
+                <img src="./images/icon-play.svg">
+              </div>
+
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p>Play</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="play_current_time" class="current_time">1hrs</p>
+                  <p id="play_last_time" class="last_time">Yesterday - 2hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="stats_card">
+              <div class="colored_layer" id="study" style="background-color: #ff5e7d;">
+                <img src="./images/icon-study.svg">
+              </div>
+
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p>Study</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="stydy_current_time" class="current_time">0hrs</p>
+                  <p id="study_last_time" class="last_time">Yesterday -1hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+            
+          </aside>
+
+
+
+          <aside class="stats_BottomLayer">
+
+            <div class="stats_card" id="work">
+              <div class="colored_layer" style="background-color: #4bcf83;">
+                <img src="./images/icon-exercise.svg" style="width: 76px; height: 50px;">
+              </div>
+
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p>Exercise</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="exercise_current_time" class="current_time">1hrs</p>
+                  <p id="exercise_last_time" class="last_time">Yesterday - 1hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="stats_card">
+              <div class="colored_layer" id="play" style="background-color: #7235d1;">
+                <img src="./images/icon-social.svg">
+              </div>
+
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p id="">Social</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="social_current_time" class="current_time">1hrs</p>
+                  <p id="social_last_time" class="last_time">Yesterday - 3hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="stats_card">
+              <div class="colored_layer" id="study" style="background-color: #f1c75b;">
+                <img src="./images/icon-self-care.svg" style="width: 50px; height: 50px;">
+              </div>
+                
+              <div class="stats">
+                <div class="type_of_stat">
+                  <p>Self care</p>
+                  <img src="./images/icon-ellipsis.svg">
+                </div>
+
+                <div class="numbers">
+                  <p id="selfcare_current_time" class="current_time">0hrs</p>
+                  <p id="selfcare_last_time" class="last_time">Yesterday - 1hrs</p>
+                </div>
+
+              </div>
+            </div>
+
+
+          </aside>
+        </div>
+
+        </div>
+    </section>
+
+  
+  </main>
+
+
+<script>
+    function function1() {
+      document.getElementById("h1").innerHTML = "Daily";
+
+      document.getElementById("work_current_time").innerHTML= "5hrs";
+      document.getElementById("work_last_time").innerHTML= "Yesterday - 2hrs";
+
+      document.getElementById("play_current_time").innerHTML= "1hrs";
+      document.getElementById("play_last_time").innerHTML= "Yesterday - 2hrs";
+      
+      document.getElementById("stydy_current_time").innerHTML= "0hrs";
+      document.getElementById("study_last_time").innerHTML= "Yesterday - 1hrs";
+
+      document.getElementById("exercise_current_time").innerHTML= "1hrs";
+      document.getElementById("exercise_last_time").innerHTML= "Yesterday - 1hrs";
+
+      document.getElementById("social_current_time").innerHTML= "1hrs";
+      document.getElementById("social_last_time").innerHTML= "Yesterday - 3hrs";
+
+      document.getElementById("selfcare_current_time").innerHTML= "0hrs";
+      document.getElementById("selfcare_last_time").innerHTML= "Yesterday - 1hrs";
+
+      document.getElementById("daily").style.color = "#d8dce3";
+      document.getElementById("weekly").style.color = "#6e6faf";
+      document.getElementById("monthly").style.color ="#6e6faf";
+
+  }
+  function function2() {
+      document.getElementById("h1").innerHTML = "Weekly";
+
+      document.getElementById("work_current_time").innerHTML= "32hrs";
+      document.getElementById("work_last_time").innerHTML= "Last week - 36hrs";
+
+      document.getElementById("play_current_time").innerHTML= "10hrs";
+      document.getElementById("play_last_time").innerHTML= "Last week - 8hrs";
+      
+      document.getElementById("stydy_current_time").innerHTML= "4hrs";
+      document.getElementById("study_last_time").innerHTML= "Last week - 7hrs";
+
+      document.getElementById("exercise_current_time").innerHTML= "4hrs";
+      document.getElementById("exercise_last_time").innerHTML= "Last week - 5hrs";
+
+      document.getElementById("social_current_time").innerHTML= "5hrs";
+      document.getElementById("social_last_time").innerHTML= "Last week - 10hrs";
+
+      document.getElementById("selfcare_current_time").innerHTML= "2hrs";
+      document.getElementById("selfcare_last_time").innerHTML= "Last week - 2hrs";
+
+      
+      document.getElementById("daily").style.color = "#6e6faf";
+      document.getElementById("weekly").style.color = "#d8dce3";
+      document.getElementById("monthly").style.color ="#6e6faf";
+  }
+  function function3() {
+      document.getElementById("h1").innerHTML = "Monthly";
+
+      document.getElementById("work_current_time").innerHTML= "103hrs";
+      document.getElementById("work_last_time").innerHTML= "Last month - 128hrs";
+
+      document.getElementById("play_current_time").innerHTML= "23hrs";
+      document.getElementById("play_last_time").innerHTML= "Last month - 29hrs";
+      
+      document.getElementById("stydy_current_time").innerHTML= "13hrs";
+      document.getElementById("study_last_time").innerHTML= "Last month - 19hrs";
+
+      document.getElementById("exercise_current_time").innerHTML= "11hrs";
+      document.getElementById("exercise_last_time").innerHTML= "Last month - 18hrs";
+
+      document.getElementById("social_current_time").innerHTML= "21hrs";
+      document.getElementById("social_last_time").innerHTML= "Last month - 23hrs";
+
+      document.getElementById("selfcare_current_time").innerHTML= "7hrs";
+      document.getElementById("selfcare_last_time").innerHTML= "Last month - 11hrs";
+
+      document.getElementById("daily").style.color = "#6e6faf";
+      document.getElementById("weekly").style.color = "#6e6faf";
+      document.getElementById("monthly").style.color ="#d8dce3";
+}
+
+
+
+</script>
+  
+</body>
+</html>
