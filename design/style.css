@@ -313,17 +313,23 @@
 
   
   }
+  .current_time {
+    font-size: 35px;
+  }
 
   @media only screen and (max-width: 540px) {
-    .stats_card {
-      width: 255px;
+    .stats_card, .user_card {
+      width: 90%;
     }
-    .user_card {
-      width: 255px;
+    .stats_BottomLayer, .stats_TopLayer, .stats_flex {
+      gap: 60px;
     }
     .type_of_time_ul {
       gap: 0px;
       justify-content: space-evenly;
+    }
+    .numbers {
+      justify-content: space-between;
     }
     .user_name {
       font-size: 19px;
